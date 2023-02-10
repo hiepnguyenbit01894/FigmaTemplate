@@ -1,0 +1,139 @@
+.feature {
+  padding: 0 15px;
+  margin-bottom: 160px;
+  &-main {
+    @include flex();
+    flex-direction: column;
+    gap: 160px 0;
+  }
+  &-header {
+    max-width: 888px;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  &-heading {
+    @include font(40px, 600, 160%);
+    margin-bottom: 60px;
+  }
+  &-text {
+    @include font(22px, null, 180%);
+    letter-spacing: 0.02em;
+    color: $gray;
+  }
+  &-item {
+    @include flex();
+    gap: 0 40px;
+    max-height: 80px;
+  }
+  &-list {
+    @include flex(space-between, flex-start);
+    flex-direction: column;
+    gap: 40px 0;
+  }
+  &-icon {
+    @include widthHeight(60px, 60px);
+    @include flex(center, center);
+    border-radius: 100rem;
+    background-color: #fbfbfb;
+    flex-shrink: 0;
+    box-shadow: 0px 15px 44px rgba(13, 15, 28, 0.12);
+  }
+  &-section {
+    margin: 0 auto;
+    @include flex(space-between, center);
+    width: 100%;
+  }
+  &-section:first-of-type {
+    max-width: 1610px;
+    gap: 0 126px;
+    .feature-content {
+      width: 100%;
+      max-width: 542px;
+    }
+    .feature-heading {
+      margin-bottom: 60px;
+    }
+  }
+  &-section:nth-of-type(2) {
+    max-width: 1470px;
+    .feature-heading {
+      max-width: 393px;
+    }
+    .feature-text {
+      max-width: 568px;
+    }
+    .feature-image {
+      max-width: 637px;
+    }
+  }
+  &-section:nth-of-type(3) {
+    max-width: 1490px;
+    .feature-heading {
+      max-width: 347px;
+    }
+    .feature-text {
+      max-width: 596px;
+    }
+    .feature-image {
+      max-width: 617px;
+    }
+  }
+  &-section:nth-of-type(4) {
+    max-width: 1570px;
+    .feature-heading {
+      max-width: 420px;
+    }
+    .feature-text {
+      max-width: 645px;
+    }
+    .feature-image {
+      max-width: 808px;
+    }
+  }
+  &-section:nth-of-type(5) {
+    max-width: 1515px;
+    margin-bottom: 150px;
+    .feature-heading {
+      max-width: 274px;
+    }
+    .feature-text {
+      max-width: 540px;
+    }
+    .feature-image {
+      max-width: 755px;
+    }
+  }
+  &-more {
+    color: $secondary-color;
+    border: 1px solid currentColor;
+    padding: 19px 38px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .feature {
+    &-section:first-of-type {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    & > * {
+      width: 100%;
+    }
+    &-list {
+      gap: 50px;
+    }
+    &-section:nth-of-type(2),
+    &-section:nth-of-type(3),
+    &-section:nth-of-type(4),
+    &-section:nth-of-type(5) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &-more {
+      max-width: 284px;
+    }
+  }
+}

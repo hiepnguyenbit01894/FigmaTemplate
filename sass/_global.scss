@@ -1,0 +1,75 @@
+body {
+  font-size: 22px;
+  color: $gray-darker;
+  font-weight: 400;
+  line-height: 1;
+  font-family: $font-primary;
+}
+.btn {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: $font-primary;
+  line-height: calc(33 / 22);
+  padding: 13px 50px;
+  border: 0;
+  outline: none;
+  border-radius: 100rem;
+  cursor: pointer;
+  &--white {
+    background-color: white;
+    color: $gray-light;
+  }
+  &--primary {
+    color: white;
+    background-color: $secondary-color;
+  }
+  &--secondary {
+    color: $secondary-color;
+    background-color: transparent;
+    border: 1px solid currentColor;
+  }
+  &--latest {
+    padding: 2px 35px;
+  }
+}
+.global {
+  &-heading {
+    color: $primary-color;
+    span {
+      color: $secondary-color;
+    }
+    @include font(36px, bold, 180%);
+    margin-bottom: 20px;
+  }
+  &-text {
+    @include font(24px, null, 180%);
+    color: $gray;
+  }
+  &-caption {
+    color: #525596;
+    @include font(20px, 400, 27px);
+    letter-spacing: 0.2em;
+    padding-left: 110px;
+    position: relative;
+    margin-bottom: 33px;
+    &::before {
+      content: "";
+      @include widthHeight(80px, 1px);
+      background-color: #525596;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+.bg-purple {
+  background-color: $purple;
+}
+.bg-orange {
+  background: $secondary-color;
+}
+.bg-blue {
+  background: $blue;
+}

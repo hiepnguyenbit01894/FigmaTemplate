@@ -1,0 +1,153 @@
+.header {
+  background-color: $yellow;
+  overflow: hidden;
+  margin-bottom: 100px;
+  &-container {
+    max-width: 1725px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  &-top {
+    padding-top: 60px;
+    padding-bottom: 83px;
+
+    @include flex(null, center);
+  }
+  &-buttons {
+    margin-left: 80px;
+    @include flex(null, center);
+    gap: 0 34px;
+  }
+  &-main {
+    @include flex(space-between, center);
+    gap: 0 37px;
+  }
+  &-heading {
+    @include font(54px, bold, calc(81 / 54));
+    margin-bottom: 34px;
+    color: $secondary-color;
+    span {
+      color: $primary-color;
+    }
+  }
+  &-desc {
+    @include font(24px, null, 160%);
+    margin-bottom: 52px;
+    color: $gray-darker;
+  }
+  &-actions {
+    @include flex(null, center);
+    gap: 0 40px;
+    .btn--primary {
+      padding: 22px 38px;
+    }
+    .watch {
+      @include flex(null, center);
+      &-icon {
+        background-color: #fff;
+        border-radius: 100rem;
+        @include widthHeight(80px, 80px);
+        @include flex(center, center);
+      }
+      gap: 0 32px;
+      @include font(24px, null, calc(36 / 24));
+      color: inherit;
+    }
+  }
+  &-btn,
+  &-exit {
+    display: none;
+  }
+}
+.menu {
+  margin-left: auto;
+  @include flex(null, center);
+  gap: 0 80px;
+  &-link {
+    color: inherit;
+  }
+}
+
+// === tablet
+@media screen and (max-width: 1275px) {
+  .header {
+    overflow: visible;
+    &-top {
+      justify-content: space-between;
+    }
+    &-btn,
+    &-exit {
+      display: block;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        color: $secondary-color;
+        transition: 0.3s;
+      }
+    }
+    &-exit {
+      margin-left: 30px;
+      color: white;
+      transition: 0.3s;
+      &:hover {
+        color: $secondary-color;
+        transition: 0.3s;
+      }
+    }
+    &-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 30px 30px 30px;
+      a {
+        margin-bottom: 30px;
+        padding: 0;
+        background-color: transparent;
+        transition: 0.3s;
+        &:hover {
+          color: $secondary-color;
+          transition: 0.3s;
+        }
+      }
+    }
+    &-main {
+      flex-direction: column;
+    }
+  }
+
+  .menu {
+    position: fixed;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 20;
+    background-color: $primary-color;
+    align-items: stretch;
+    gap: 60px 0;
+    padding-top: 20px;
+    transform: translateX(100%);
+    transition: 0.4s;
+    color: white;
+    &-link {
+      margin: 30px;
+      transition: 0.4s;
+      &:hover {
+        color: $secondary-color;
+        transition: 0.4s;
+      }
+    }
+  }
+  .active {
+    transform: translateX(0%);
+    transition: 0.4s;
+  }
+}
+// === mobile
+@media screen and (max-width: 650px) {
+  .header {
+    &-actions {
+      flex-direction: column;
+    }
+  }
+}

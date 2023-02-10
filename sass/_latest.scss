@@ -1,0 +1,91 @@
+.latest {
+  margin-top: 263px;
+  padding: 0 15px;
+  max-width: 1587px;
+  margin: 263px auto 160px auto;
+  &-primary {
+    max-width: 640px;
+  }
+  &-secondary {
+    gap: 40px 0;
+    @include flex(space-between, center);
+    flex-direction: column;
+  }
+  &-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &-desc {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  &-image {
+    margin-bottom: 51px;
+  }
+  &-main {
+    @include flex();
+    gap: 0 120px;
+  }
+  .btn {
+    &--news {
+      color: #252641;
+      background-color: #f4c467;
+      border-radius: 80px;
+      @include font(18px, 400, 27px);
+      padding: 4px 12px;
+    }
+    &--first {
+      padding: 2px 35px;
+      @include font(20px, 500, 180%);
+    }
+
+    &--more {
+      @include font(20px, 400, 180%);
+      letter-spacing: 0.02em;
+      color: #696984;
+      text-decoration-line: underline;
+    }
+    &--position {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  &-title {
+    margin: 20px 0;
+    @include font(26px, 500, 180%);
+  }
+  &-text {
+    @include font(20px, 400, 180%);
+    margin-bottom: 28px;
+  }
+  &--tit {
+    @include font(22px, 500, 180%);
+    margin-bottom: 20px;
+  }
+  &-item {
+    @include flex(space-between, flex-start);
+    gap: 0 40px;
+  }
+  &-picture {
+    position: relative;
+  }
+  &-para {
+    max-width: 477px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .latest {
+    & > * {
+      width: 100%;
+    }
+    &-main {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px 0;
+    }
+    &-item {
+      flex-direction: column;
+    }
+  }
+}

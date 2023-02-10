@@ -1,0 +1,36 @@
+.intergation {
+  max-width: 1490px;
+  padding: 0 15px;
+  margin: 0 auto 160px;
+  @include flex(space-between, center);
+  &-brand {
+    @include flex(null, center);
+    flex-wrap: wrap;
+    gap: 85px;
+    max-width: 480px;
+  }
+  &-content {
+    width: 100%;
+    max-width: 688px;
+  }
+
+  &-heading {
+    font-family: $font-secondary;
+    margin-bottom: 30px;
+    line-height: 160%;
+  }
+  &-text {
+    margin-bottom: 44px;
+    line-height: 180%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .intergation {
+    &-brand {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,79 @@
+.footer {
+  background-color: #252641;
+  text-align: center;
+  &-brand {
+    @include flex(center, center);
+    padding-top: 74px;
+    padding-bottom: 95px;
+  }
+  &-logo {
+    padding-right: 41px;
+    border-right: 1px solid#626381;
+  }
+  &-title {
+    padding-left: 41px;
+    @include font(22px, 600, 33px);
+    color: white;
+    max-width: 200px;
+  }
+  &-desc {
+    color: #b2b3cf;
+    @include font(26px, 500, 39px);
+    padding-bottom: 20px;
+  }
+  &-input {
+    padding: 15px 258px 15px 30px;
+    @include font(20px, 400, 30px);
+    max-width: 400px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid;
+    color: #83839a;
+    border-radius: 80px;
+    margin-right: 20px;
+  }
+  .btn--subcribe {
+    background: linear-gradient(105.5deg, #545ae7 19.57%, #393fcf 78.85%);
+    padding: 14px 34px;
+    border-radius: 60px;
+    color: white;
+  }
+  form {
+    padding-bottom: 96px;
+  }
+  &-list {
+    @include flex(center, center);
+    color: #b2b3cf;
+    padding-bottom: 20px;
+  }
+  &-item {
+    padding: 0 20px;
+    border-right: 1px solid #626381;
+    &:last-child {
+      border: none;
+    }
+  }
+  &-year {
+    @include font(22px, 400, 33px);
+    color: #b2b3cf;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    form {
+      input {
+        padding: 15px 10% 15px 30px;
+        align-self: center;
+        margin-right: 0px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 20px;
+      }
+    }
+    &-list {
+      flex-wrap: wrap;
+    }
+  }
+}
